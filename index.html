@@ -28,6 +28,9 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("41d1b48b55cfeed2901c98e2184707c8");</script><!-- end Mixpanel -->
 </head>
 
 <body>
@@ -47,8 +50,8 @@
         <span itemprop="email">arifin4web @at@ gmail.com</span>
         <div class="row">
           <div class="col-xs-12">
-            <a alt="githib url" itemprop="url" href="https://github.com/arifin4web">Github</a> |
-            <a alt="linkedin url" itemprop="url" href="https://bd.linkedin.com/in/arifinbinmatin">LinkedIn</a>
+            <a target="_blank" onclick="track_click('github')" alt="githib url" itemprop="url" href="https://github.com/arifin4web">Github</a> |
+            <a target="_blank" onclick="track_click('linkedin')" alt="linkedin url" itemprop="url" href="https://bd.linkedin.com/in/arifinbinmatin">LinkedIn</a>
             <!-- | <a alt="blog url" itemprop="url" href="">Blog</a> -->
           </div>
         </div>
@@ -60,19 +63,19 @@
         <span itemprop="email">arifin4web @at@ gmail.com</span>
         <div class="row">
           <div class="col-xs-12">
-            <a alt="githib url" itemprop="url" href="https://github.com/arifin4web">Github</a> |
-            <a alt="linkedin url" itemprop="url" href="https://bd.linkedin.com/in/arifinbinmatin">LinkedIn</a>
+            <a target="_blank" onclick="track_click('github')" alt="githib url" itemprop="url" href="https://github.com/arifin4web">Github</a> |
+            <a target="_blank" onclick="track_click('linkedin')" alt="linkedin url" itemprop="url" href="https://bd.linkedin.com/in/arifinbinmatin">LinkedIn</a>
             <!-- | <a alt="blog url" itemprop="url" href="">Blog</a> -->
           </div>
         </div>
       </div>
       <div class="col-lg-2 col-lg-offset-0 p2perc visible-lg">
-        <a href="http://arifin4web.github.io/cv/arifin_resume.pdf" download="arifin_resume.pdf" class="btn btn-primary">Download Resume</a>
+        <a onclick="track_resume_download_click()" href="http://arifin4web.github.io/cv/arifin_resume.pdf" download="arifin_resume.pdf" class="btn btn-primary">Download Resume</a>
         <!-- <a href="" class="btn btn-primary">Download CV</a> -->
       </div>
       <div class="col-xs-6 col-xs-offset-3 text-center p2perc hidden-lg">
         <!-- <a href="" class="btn btn-primary">Download CV</a> -->
-        <a href="http://arifin4web.github.io/cv/arifin_resume.pdf" download="arifin_resume.pdf" class="btn btn-primary">Download Resume</a>
+        <a onclick="track_resume_download_click()" href="http://arifin4web.github.io/cv/arifin_resume.pdf" download="arifin_resume.pdf" class="btn btn-primary">Download Resume</a>
       </div>
 
     </div>
@@ -169,7 +172,7 @@
   <div id="footer" class="row bg-primary p2perc">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 text-center">
+        <div class="col-xs-6">
           <span class="pr5px">
             Copyleft
             <span class="copy-left">&copy</span>
@@ -179,6 +182,9 @@
             <span class="small">By</span>
             <a class="text-white" href="#"> Md. Arifin Ibne Matin</a>
           </span>
+        </div>
+        <div class="col-xs-6 text-right">
+          Powered By: <a href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
         </div>
       </div>
 
@@ -191,6 +197,9 @@
       </div> -->
     </div>
   </div>
+  <script type="text/javascript">
+
+  </script>
 
 </body>
 

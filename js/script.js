@@ -13,4 +13,16 @@ $(document).ready(function() {
       return false;
     });
   });
+
+  // Send Mixpanel
+  mixpanel.track("homepage_view");
 });
+
+var track_resume_download_click = function (){
+  mixpanel.track("resume_download");
+};
+var track_click = function (itemName){
+  mixpanel.track("click", {
+    'item': itemName
+  });
+};
