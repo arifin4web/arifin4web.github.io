@@ -1,0 +1,90 @@
+.p5perc{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.p2perc{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.pl2perc{
+  padding-left: 2%;
+}
+.pr2perc{
+  padding-right: 2%;
+}
+.pr5px{
+  padding-right: 5px;
+}
+.pl5px{
+  padding-left: 5px;
+}
+.pt2x{
+  padding-top: 2px;
+}
+.p10perc{
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.p10px{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.m5perc{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.mt2perc{
+  margin-top: 2%;
+}
+.mb2perc{
+  margin-bottom: 2%;
+}
+.ml2perc{
+  margin-left:  2%;
+}
+.mr2perc{
+  margin-right: 2%;
+}
+a.h1, a.h2, a.h3, a.h4, a.h5, a.h6{
+  color: #337ab7;
+}
+.mtn{
+  margin-top: 0px;
+}
+.copy-left {
+ display: inline-block;
+ text-align: left;
+ margin: 0px;
+ -moz-transform: scaleX(-1);
+ -o-transform: scaleX(-1);
+ -webkit-transform: scaleX(-1);
+ transform: scaleX(-1);
+ filter: FlipH;
+ -ms-filter: "FlipH";
+}
+
+.text-white{
+  color: #fff;
+}
+.image-frame-2px{
+  border: 2px solid;
+}
+.very_small{
+  font-size: 12px;
+}
+.pointer{
+  cursor: pointer;
+}
+.smaller {
+    font-size: 70%;
+}
