@@ -28,9 +28,52 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
-mixpanel.init("41d1b48b55cfeed2901c98e2184707c8");</script><!-- end Mixpanel -->
+  <!-- start Mixpanel -->
+  <script type="text/javascript">
+    (function(e, b) {
+      if (!b.__SV) {
+        var a, f, i, g;
+        window.mixpanel = b;
+        b._i = [];
+        b.init = function(a, e, d) {
+          function f(b, h) {
+            var a = h.split(".");
+            2 == a.length && (b = b[a[0]], h = a[1]);
+            b[h] = function() {
+              b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+            }
+          }
+          var c = b;
+          "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+          c.people = c.people || [];
+          c.toString = function(b) {
+            var a = "mixpanel";
+            "mixpanel" !== d && (a += "." + d);
+            b || (a += " (stub)");
+            return a
+          };
+          c.people.toString = function() {
+            return c.toString(1) + ".people (stub)"
+          };
+          i =
+            "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user"
+            .split(" ");
+          for (g = 0; g < i.length; g++) f(c, i[g]);
+          b._i.push([a, e, d])
+        };
+        b.__SV = 1.2;
+        a = e.createElement("script");
+        a.type = "text/javascript";
+        a.async = !0;
+        a.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" :
+          "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+        f = e.getElementsByTagName("script")[0];
+        f.parentNode.insertBefore(a, f)
+      }
+    })(document, window.mixpanel || []);
+    mixpanel.init("41d1b48b55cfeed2901c98e2184707c8");
+  </script>
+  <!-- end Mixpanel -->
 </head>
 
 <body>
@@ -99,70 +142,109 @@ mixpanel.init("41d1b48b55cfeed2901c98e2184707c8");</script><!-- end Mixpanel -->
 
 
     <section id="summary">
-      <h2>Summary <small class="very_small pointer"><a class="go-to-top">top</a></small></h2>
+      <h2>Summary
+        <small class="very_small pointer"><a class="go-to-top">top</a></small>
+      </h2>
       <div class="row">
         <div class="col-xs-12">
           <h4>What I Do?</h3>
-          <p>I design, build and deploy <a data-original-title="A non-trivial application ..." href="javascript:void(0)" class="popoverLink" data-content='<ul><li>lets users enter data</li><li>behaves differently depending on previously entered data</li><li>receives data from other applications</li><li>shares its data with other applications</li><li>lets users interact with it from a variety of channels, like web, mobile, desktop, email, text message, etc.</li><li>handles money</li><li>scales to accommodate increased usage</li></ul>'>non-trivial</a>            software using the <a data-original-title="The right tool ..." href="javascript:void(0)" class="popoverLink" data-content="<ul><li>allows me to build software that meets business requirements</li><li>makes me faster and better at what I do</li><li>doesn't get in my way</li><li>lets me use other tools where appropriate</li><li>costs less than it saves</li><li>provides the same benefits to whoever takes over the software after me</li></ul>">right tools</a>,
-            doing <a data-original-title="Whatever it takes means ..." href="javascript:void(0)" class="popoverLink" data-content="<ul><li>letting the requirements guide the solution, not the other way around</li><li>being creative</li><li>staying focused on the project's goals</li><li>looking outside of technology for the solution when appropriate</li></ul>">whatever it takes</a>            to make the project a success.
-          </p>
+            <p>I design, build and deploy <a data-original-title="A non-trivial application ..." href="javascript:void(0)" class="popoverLink" data-content='<ul><li>lets users enter data</li><li>behaves differently depending on previously entered data</li><li>receives data from other applications</li><li>shares its data with other applications</li><li>lets users interact with it from a variety of channels, like web, mobile, desktop, email, text message, etc.</li><li>handles money</li><li>scales to accommodate increased usage</li></ul>'>non-trivial</a>              software using the <a data-original-title="The right tool ..." href="javascript:void(0)" class="popoverLink" data-content="<ul><li>allows me to build software that meets business requirements</li><li>makes me faster and better at what I do</li><li>doesn't get in my way</li><li>lets me use other tools where appropriate</li><li>costs less than it saves</li><li>provides the same benefits to whoever takes over the software after me</li></ul>">right tools</a>,
+              doing <a data-original-title="Whatever it takes means ..." href="javascript:void(0)" class="popoverLink" data-content="<ul><li>letting the requirements guide the solution, not the other way around</li><li>being creative</li><li>staying focused on the project's goals</li><li>looking outside of technology for the solution when appropriate</li></ul>">whatever it takes</a>              to make the project a success.
+            </p>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <h4>What is in my skill set?</h3>
-          <p> I am a full stack developer and have played with a lot of tools and toys. However, I would call these my primary stacks/skills:</p>
-          <div>
-            <h5><strong>Python</strong></h5>
-            <p>I did consider myself a dedicated Python developer just a while ago. Currently I switch between Python and Meteor, depending on the applications need. I still love all things in Python. Have around two and half years of working experience with different Python tools and stacks.</p>
-            <ul>
-              <li>Django</li>
-              <li>Django Rest Framework</li>
-              <li>Flask</li>
-              <li>Celery</li>
-              <li>South</li>
-              <li>Fabric</li>
-            </ul>
-          </div>
-          <div>
-            <h5><strong>Meteor</strong></h5>
-            <p>I have been working with <a href="https://www.meteor.com/" title="Meteor Website">meteor</a> for last one year. I love the <a href="https://www.meteor.com/ddp">Distributed Data Protocol (DDP)</a> in meteor, which makes it very easy to achieve reactiveness. Not a big fan of making hybrid app using meteor, though it can be useful in making quick protoypes.</p>
-            <ul>
-              <li>Meteor</li>
-              <li>Blaze + React</li>
-              <li>Iron Router + Flow Router</li>
-              <li>Collection2</li>
-              <li>Tinytest</li>
-            </ul>
-            <p>Currently I am learning <code>ES2015</code>  as from version 1.3, Meteor will add ES6(ES2015) module support.</p>
-          </div>
-          <div>
-            <h5><strong>PHP</strong></h5>
-            <p>PHP has been my primary stack of web application development for a long time. I started doing professional PHP development since late 2009. I still enjoy writing PHP, specially with the new syntax, language features and modern frameworks - PHP is still fun to me.</p>
-            <ul>
-              <!-- <li>Laravel</li> -->
-              <li>Zend (1.x + 2.x)</li>
-              <li>CodeIgniter</li>
-              <li>WordPress</li>
-              <li>Magento</li>
-            </ul>
-          </div>
-          <div>
-            <h5><strong>Front End</strong></h5>
-            <p>I have mostly worked as a backend developer during my career over the past 6-7 years. But I have had my share of front end development too. I am definitely not a kickass front end ninja but I do know more than enough HTML, CSS and JavaScript to build decent Web UIs and mobile applications.</p>
-            <ul>
-              <li>JavaScript</li>
-              <li>jQuery</li>
-              <li>AngularJS(1.x)</li>
-              <li>Bootstrap</li>
-              <li>SASS</li>
-            </ul>
-          </div>
-          <div>
-            <h5><strong>ToolSet</strong></h5>
-            <p>I  know <strong>git</strong> and work on <strong>OS X</strong>. I have Linux VMs running inside <strong>Vagrant</strong>. I use custom <strong>Fabic</strong> for automated deployment. Also a big fan of <strong>Docker</strong>.I have working experience with <strong>MySQL</strong>, <strong>PostgreSQL</strong> and <strong>NoSQL</strong>s like <strong>MongoDB</strong> as well. Have decent experience of using various cloud platforms like <strong>AWS</strong>( <strong>EC2</strong>, <strong>S3</strong>, <strong>SQS</strong>, <strong>RDS</strong> ) and <strong>DigitalOcean</strong>.</p>
-            <p>I am a believer in <strong>code quality</strong> and follow the <strong>best practices</strong>. I use <strong>Jetbrains IDE</strong>s for optimum <strong>productivity</strong> and <strong>cleaner codes</strong>. I believe every developer should write <strong>unit tests</strong> before starting to write business logic. <strong>TDD </strong>is my super secret ninja skills against bugs.</p>
-          </div>
+            <p> I am a full stack developer and have played with a lot of tools and toys. However, I would call these my primary stacks/skills:</p>
+            <div>
+              <h5>
+                <strong>Python</strong>
+              </h5>
+              <p>I did consider myself a dedicated Python developer just a while ago. Currently I switch between Python and Meteor, depending on the applications need. I still love all things in Python. Have around two and half years of working experience
+                with different Python tools and stacks.</p>
+              <ul>
+                <li>Django</li>
+                <li>Django Rest Framework</li>
+                <li>Flask</li>
+                <li>Celery</li>
+                <li>South</li>
+                <li>Fabric</li>
+              </ul>
+            </div>
+            <div>
+              <h5>
+                <strong>Meteor</strong>
+              </h5>
+              <p>I have been working with <a href="https://www.meteor.com/" title="Meteor Website">meteor</a> for last one year. I love the <a href="https://www.meteor.com/ddp">Distributed Data Protocol (DDP)</a> in meteor, which makes it very easy to achieve
+                reactiveness. Not a big fan of making hybrid app using meteor, though it can be useful in making quick protoypes.</p>
+              <ul>
+                <li>Meteor</li>
+                <li>Blaze + React</li>
+                <li>Iron Router + Flow Router</li>
+                <li>Collection2</li>
+                <li>Tinytest</li>
+              </ul>
+              <p>Currently I am learning
+                <code>ES2015</code> as from version 1.3, Meteor will add ES6(ES2015) module support.</p>
+            </div>
+            <div>
+              <h5>
+                <strong>PHP</strong>
+              </h5>
+              <p>PHP has been my primary stack of web application development for a long time. I started doing professional PHP development since late 2009. I still enjoy writing PHP, specially with the new syntax, language features and modern frameworks
+                - PHP is still fun to me.</p>
+              <ul>
+                <!-- <li>Laravel</li> -->
+                <li>Zend (1.x + 2.x)</li>
+                <li>CodeIgniter</li>
+                <li>WordPress</li>
+                <li>Magento</li>
+              </ul>
+            </div>
+            <div>
+              <h5>
+                <strong>Front End</strong>
+              </h5>
+              <p>I have mostly worked as a backend developer during my career over the past 6-7 years. But I have had my share of front end development too. I am definitely not a kickass front end ninja but I do know more than enough HTML, CSS and JavaScript
+                to build decent Web UIs and mobile applications.</p>
+              <ul>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>AngularJS(1.x)</li>
+                <li>Bootstrap</li>
+                <li>SASS</li>
+              </ul>
+            </div>
+            <div>
+              <h5>
+                <strong>ToolSet</strong>
+              </h5>
+              <p>I know
+                <strong>git</strong> and work on
+                <strong>OS X</strong>. I have Linux VMs running inside
+                <strong>Vagrant</strong>. I use custom
+                <strong>Fabic</strong> for automated deployment. Also a big fan of
+                <strong>Docker</strong>.I have working experience with
+                <strong>MySQL</strong>,
+                <strong>PostgreSQL</strong> and
+                <strong>NoSQL</strong>s like
+                <strong>MongoDB</strong> as well. Have decent experience of using various cloud platforms like
+                <strong>AWS</strong>(
+                <strong>EC2</strong>,
+                <strong>S3</strong>,
+                <strong>SQS</strong>,
+                <strong>RDS</strong> ) and
+                <strong>DigitalOcean</strong>.</p>
+              <p>I am a believer in
+                <strong>code quality</strong> and follow the
+                <strong>best practices</strong>. I use
+                <strong>Jetbrains IDE</strong>s for optimum
+                <strong>productivity</strong> and
+                <strong>cleaner codes</strong>. I believe every developer should write
+                <strong>unit tests</strong> before starting to write business logic.
+                <strong>TDD </strong>is my super secret ninja skills against bugs.</p>
+            </div>
         </div>
       </div>
     </section>
@@ -183,15 +265,14 @@ mixpanel.init("41d1b48b55cfeed2901c98e2184707c8");</script><!-- end Mixpanel -->
           </span>
         </div>
         <div class="col-xs-6 text-right">
-          Powered By: <a href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
+          Powered By:
+          <a href="https://mixpanel.com/f/partner" rel="nofollow">
+            <img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" />
+          </a>
         </div>
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-
-  </script>
-
 </body>
 
 </html>
