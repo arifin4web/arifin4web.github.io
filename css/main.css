@@ -88,3 +88,18 @@ a.h1, a.h2, a.h3, a.h4, a.h5, a.h6{
 .smaller {
     font-size: 70%;
 }
+ul.small_left_padding{
+  padding-left: 10px;
+}
+.font-thin{
+  font-weight: 400;
+}
+.no-b-m{
+  margin-bottom: 0px;
+}
+.m-t-5{
+  margin-top: 5px;
+}
+.m-b{
+  margin-bottom: 15px;
+}
