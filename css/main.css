@@ -100,6 +100,23 @@ ul.small_left_padding{
 .m-t-5{
   margin-top: 5px;
 }
+.m-t-10{
+  margin-top: 10px;
+}
+.m-t{
+  margin-top: 15px;
+}
+.m-t-20{
+  margin-top: 20px;
+}
 .m-b{
   margin-bottom: 15px;
+}
+
+span.highlighted {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.2em;
+    color: black;
+    background-color: yellow;
 }
