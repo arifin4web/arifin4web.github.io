@@ -22,7 +22,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Expert in building web applications and enjoy working full stack.
 blog_header: A collection of things I've learned in my day-to-day life deemed sharing.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://localhost:4000" # the base hostname & protocol for your site
+url: "http://arifin4web.github.io" # the base hostname & protocol for your site
 github_username:  arifin4web
 
 # Build settings
