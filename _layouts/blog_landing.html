@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+  <title>Blog | Md. Arifin Ibne Matin - Full Stack Web Application Developer</title>
+
+  <meta property="og:title" content="Blog | Md. Arifin Ibne Matin" />
+  <meta property="twitter:title" content="Blog | Md. Arifin Ibne Matin" />
+  <meta name="description" content="A blog site maintained by Md. Arifin Ibne Matin. Though he is entitled as Full Stack Web Application Developer, He is basically a problem solver. Contineously excelling himself to solve a range of practical problems around him. Expert in building web applications and usually work full stack.">
+  <meta property="og:description" content="A blog site maintained by Md. Arifin Ibne Matin. Though he is entitled as Full Stack Web Application Developer, He is basically a problem solver. Contineously excelling himself to solve a range of practical problems around him. Expert in building web applications and usually work full stack."
+  />
+  <meta name="author" content="Md. Arifin Ibne Matin" />
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/custom.css" />
+  <!-- JS Scripts -->
+  <script type="text/javascript" src="{{ site.baseurl }}/main/js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/main/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+
+  <nav id="main_nav" class="navbar navbar-primary navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand pointer" href="{{ site.baseurl }}/">
+          <img src="{{ site.baseurl }}/main/images/arifin.png" class="img-thumbnail img-circle" alt="Md. Arifin Ibne Matin" style="height: 2em;">
+        </a>
+      </div>
+      <div id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a class="pointer" href="{{ site.baseurl }}/blogs/">Blogs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="main_div" class="container">
+    <div id="blog_list" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-0">
+      {% for post in site.posts %} {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %} {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %} {% if forloop.first %}
+      <h2 class="year">{{this_year}}</h2>
+      <ul class="recent-posts">
+        {% endif %}
+
+        <li>
+          <a class="pointer" href="{{ post.url }}">
+            <div>
+              <div class="col-xs-10 title">{{ post.title }}</div>
+              <aside class="date">{{ post.date | date: "%b %e" }}</aside>
+            </div>
+          </a>
+        </li>
+        {% if forloop.last %}
+      </ul>
+      {% else %} {% if this_year != next_year %}
+      </ul>
+      <h2 class="year">{{next_year}}</h2>
+      <ul class="recent-posts">
+        {% endif %} {% endif %} {% endfor %}
+
+    </div>
+
+
+  </div>
+  <!-- End container -->
+  {% include footer.html %}
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var w = $(window).height();
+      var f = document.getElementById('footer').offsetHeight + parseInt($("#footer").css("margin-top")) + parseInt($("#footer").css("margin-bottom"));
+      var n = document.getElementById('main_nav').offsetHeight + parseInt($("#main_nav").css("margin-top")) + parseInt($("#main_nav").css("margin-bottom"));
+
+      $("#main_div").css("min-height", function() {
+        return w - (f + n);
+      });
+    });
+
+    $(window).load(function() { // makes sure the whole site is loaded
+      $('#status').delay(450).fadeOut(); // will first fade out the loading animation
+      $('#preloader').delay(500).fadeOut(); // will fade out the white DIV that covers the website.
+      $('body').delay(500).css({
+        'overflow': 'visible'
+      });
+    });
+  </script>
+
+</body>
+
+</html>

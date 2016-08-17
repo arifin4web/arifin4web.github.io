@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  {% include meta.html %}
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/custom.css" />
+  <!-- JS Scripts -->
+  <script type="text/javascript" src="{{ site.baseurl }}/main/js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/main/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+
+  <nav id="main_nav" class="navbar navbar-primary navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand pointer" href="{{ site.baseurl }}/">
+          <img src="{{ site.baseurl }}/main/images/arifin.png" class="img-thumbnail img-circle" alt="Md. Arifin Ibne Matin" style="height: 2em;">
+        </a>
+      </div>
+      <div id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="pointer" href="{{ site.baseurl }}/blogs/">Blogs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="main" role="main" class="container">
+      {{ content }}
+  </div>
+  <!-- End container -->
+  {% include footer.html %}
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var w = $(window).height();
+      var f = document.getElementById('footer').offsetHeight + parseInt($("#footer").css("margin-top")) + parseInt($("#footer").css("margin-bottom"));
+      var n = document.getElementById('main_nav').offsetHeight + parseInt($("#main_nav").css("margin-top")) + parseInt($("#main_nav").css("margin-bottom"));
+
+      $("#main").css("min-height", function() {
+        return w - (f + n);
+      });
+    });
+
+    $(window).load(function() { // makes sure the whole site is loaded
+      $('#status').delay(450).fadeOut(); // will first fade out the loading animation
+      $('#preloader').delay(500).fadeOut(); // will fade out the white DIV that covers the website.
+      $('body').delay(500).css({
+        'overflow': 'visible'
+      });
+    });
+  </script>
+</body>
+
+</html>

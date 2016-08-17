@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+  <title>Md. Arifin Ibne Matin - Full Stack Web Application Developer</title>
+
+  <meta property="og:title" content="Md. Arifin Ibne Matin" />
+  <meta property="twitter:title" content="Md. Arifin Ibne Matin" />
+  <meta name="description" content="A blog site maintained by Md. Arifin Ibne Matin. Though he is entitled as Full Stack Web Application Developer, He is basically a problem solver. Contineously excelling himself to solve a range of practical problems around him. Expert in building web applications and usually work full stack.">
+  <meta property="og:description" content="A blog site maintained by Md. Arifin Ibne Matin. Though he is entitled as Full Stack Web Application Developer, He is basically a problem solver. Contineously excelling himself to solve a range of practical problems around him. Expert in building web applications and usually work full stack."
+  />
+  <meta name="author" content="Md. Arifin Ibne Matin" />
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/custom.css" />
+  <!-- JS Scripts -->
+  <script type="text/javascript" src="{{ site.baseurl }}/main/js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/main/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+
+  <div id="main_div" class="container top_space_small">
+    <div class="text-center col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+      <div class="row">
+        <div>
+          <img src="{{ site.baseurl }}/main/images/arifin.png" class="img-responsive img-thumbnail img-circle" alt="Md. Arifin Ibne Matin" style="height: 7em;">
+        </div>
+        <div class="row">
+          <h2>Md. Arifin Ibne Matin</h2>
+          <div class="text_mh">
+            Problem Solver - Programmer - Foodie - Hobbyist Cook
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0"> -->
+    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+      <div class="intro_description top_space_small bottom_space_small">
+        <p>
+          I'm basically a problem solver who continuously excel himself to solve a range of practical problems around him.
+        </p>
+        <p>
+          You can find me <a href="https://bd.linkedin.com/in/arifin4web">on LinkedIn</a>, <a href="https://github.com/arifin4web">on GitHub</a> and <a href="https://twitter.com/arifin4web">on Twitter</a>.
+        </p>
+        <p>
+          I am currently working with <a href="http://inov.io">Inovio</a>, a product lab. They provide support for startups and act as their tech partner. I help them in building a range of awesome products like <a href="https://www.alemhealth.com/" title="">Alemhealth</a>,
+          <a href="http://collabhero.com/">CollabHero</a>, <a href="https://joee.inov.io">Joee</a>, <a href="http://getbanyan.com">Banyan</a>, <a href="http://www.washmen.com/">Washmen</a>, <a href="http://assignmenthero.com/">AssignmentHero</a>.
+        </p>
+        <p>
+          I consider myself an expert both in creating web apps and in cooking <a href="http://images.google.com/search?tbm=isch&q=kacchi+biryani" target="_blank">kacchi biryani</a>. While my kacchi's recipe stays the same, I use variety of stacks to
+          build web apps. Though My current choice of stack is <a href="https://www.python.org/">Python</a>/<a href="https://www.djangoproject.com/">Django</a>, I also worked with <a href="https://nodejs.org/en/">NodeJS</a>/<a href="https://expressjs.com/">Express</a>/
+          <a
+            href="https://www.meteor.com/">Meteor</a>.
+        </p>
+        <p>
+          You can read my latest <a href="{{site.baseurl}}/blogs/">Blogs</a>. If you are interested in finding my skill-sets, take a look at my <a target="_blank" href="{{site.baseurl}}/cv/">CV</a>. Want to chat? Feel free to <a href="mailto:arifin4web@gmail.com">email</a> me.
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- End container -->
+  {% include footer.html %}
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var w = $(window).height();
+      var f = document.getElementById('footer').offsetHeight;
+      $("#main_div").css("min-height", function() {
+        return w-f;
+      });
+    });
+    $(window).load(function() { // makes sure the whole site is loaded
+      $('#status').delay(450).fadeOut(); // will first fade out the loading animation
+      $('#preloader').delay(500).fadeOut(); // will fade out the white DIV that covers the website.
+      $('body').delay(500).css({
+        'overflow': 'visible'
+      });
+    });
+  </script>
+
+</body>
+
+</html>

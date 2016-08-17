@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<article class="post col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+  {% if page.categories %}
+    <div class="post_tags text-center">
+    {% for category in page.categories %}
+      <span class="label label-default">{{ category }}</span>
+    {% endfor %}
+    </div>
+  {% endif %}
+  <h1 class="text-center">{{ page.title }}</h1>
+
+  <div class="date text-center">{{ page.date | date: "%B %e, %Y" }}</div>
+
+  <div class="entry m-t">
+    {{ content }}
+  </div>
+  <div class="top_space bottom_space text-center">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ page.title }} - " data-via="arifin4web" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+
+</article>
