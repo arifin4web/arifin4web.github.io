@@ -17,9 +17,9 @@ title: Md. Arifin Ibne Matin
 designation: Full Stack Web Application Developer
 email: arifin4web@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  This blog site is maintained by Md. Arifin Ibne Matin. He basically is a problem solver.
-  Contineously excelling himself to solve a range of practical problems around him.
-  Expert in building web applications and enjoy working full stack.
+  A blog site maintained by Md. Arifin Ibne Matin. Though he is entitled as
+  Full Stack Web Application Developer, He is basically a problem solver.
+  Expert in building web applications and cooking biryani.
 blog_header: A collection of things I've learned in my day-to-day life deemed sharing.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://arifin4web.github.io" # the base hostname & protocol for your site

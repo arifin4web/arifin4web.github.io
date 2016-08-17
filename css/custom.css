@@ -186,22 +186,20 @@ h2.year {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding-top: 1em;
 }
-.recent-posts li {
-  margin-bottom: 8px;
-  list-style-type: none;
+
+.post_in_list{
+  margin: 1em 0;
 }
-.recent-posts li:hover a {
+.post_in_list a:hover {
   color: #23527c;
 }
-.recent-posts li div {
-  padding: 5px 0;
-}
-.recent-posts li .title {
+
+.post_in_list .title {
   font-size: 2rem;
   font-weight: 300;
   padding: 0;
 }
-.recent-posts li .date {
+.post_in_list .date {
   float: right;
   font-size: 14px;
   text-transform: uppercase;

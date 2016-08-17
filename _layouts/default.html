@@ -2,12 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
   {% include meta.html %}
 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.min.css" />
@@ -27,13 +24,13 @@
   <nav id="main_nav" class="navbar navbar-primary navbar-static-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand pointer" href="{{ site.baseurl }}/">
+        <a class="navbar-brand pointer" href="{{ site.baseurl }}/" title="About">
           <img src="{{ site.baseurl }}/main/images/arifin.png" class="img-thumbnail img-circle" alt="Md. Arifin Ibne Matin" style="height: 2em;">
         </a>
       </div>
       <div id="navbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="pointer" href="{{ site.baseurl }}/blogs/">Blogs</a></li>
+          <li><a class="pointer" title="Blog List Page" href="{{ site.baseurl }}/blogs/"><span class="arrow">←</span>  Blog Posts</a></li>
         </ul>
       </div>
     </div>
