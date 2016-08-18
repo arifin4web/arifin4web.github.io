@@ -12,9 +12,12 @@
   <!-- JS Scripts -->
   <script type="text/javascript" src="{{ site.baseurl }}/main/js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="{{ site.baseurl }}/main/js/bootstrap.min.js"></script>
+  {% include google_analytics.html %}
+  {% include mixpanel.html %}
 </head>
 
 <body>
+  {% include facebook.html %}
 
   <!-- Preloader -->
   <div id="preloader">
@@ -59,6 +62,9 @@
       $('body').delay(500).css({
         'overflow': 'visible'
       });
+    });
+    mixpanel.track("page_view", {
+      'item': "{{ page.title }}"
     });
   </script>
 </body>

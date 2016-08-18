@@ -30,6 +30,9 @@ $(document).ready(function() {
 
   // Send Mixpanel
   mixpanel.track("homepage_view");
+  mixpanel.track("page_view", {
+    'item': 'CV'
+  });
 });
 
 var goto = function(elem) {

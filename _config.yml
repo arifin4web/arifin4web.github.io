@@ -24,6 +24,7 @@ blog_header: A collection of things I've learned in my day-to-day life deemed sh
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://arifin4web.github.io" # the base hostname & protocol for your site
 github_username:  arifin4web
+disqus: arifin4web
 
 # Build settings
 markdown: kramdown

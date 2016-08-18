@@ -7,19 +7,15 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-
-
-
-
   <title>Md. Arifin Ibne Matin - Full Stack Web Application Developer</title>
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.title }}" />
 
-  <meta property="og:site_name" content="Md. Arifin Ibne Matin's Personal Website'"/>
+  <meta property="og:site_name" content="Md. Arifin Ibne Matin's Personal Website'" />
   <meta property="og:title" content="Md. Arifin Ibne Matin - Full Stack Web Application Developer" />
-  <meta property="og:description" content="{{ site.description }}"/>
-  <meta property="og:image" content="{{ site.baseurl}}/main/images/arifin.png"/>
-  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:image" content="{{ site.baseurl}}/main/images/arifin.png" />
+  <meta property="og:type" content="website" />
 
 
   <meta property="twitter:title" content="Md. Arifin Ibne Matin - Full Stack Web Application Developer" />
@@ -29,56 +25,81 @@
   <!-- JS Scripts -->
   <script type="text/javascript" src="{{ site.baseurl }}/main/js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="{{ site.baseurl }}/main/js/bootstrap.min.js"></script>
+
+  {% include google_analytics.html %} {% include mixpanel.html %}
 </head>
 
 <body>
+
+  {% include facebook.html %}
 
   <!-- Preloader -->
   <div id="preloader">
     <div id="status">&nbsp;</div>
   </div>
 
-  <div id="main_div" class="container top_space_small">
-    <div class="text-center col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-      <div class="row">
-        <div>
-          <img src="{{ site.baseurl }}/main/images/arifin.png" class="img-responsive img-thumbnail img-circle" alt="Md. Arifin Ibne Matin" style="height: 7em;">
-        </div>
+  <div id="main_div" class="container" style="padding-top: 1em;">
+    <div class="row">
+      <div class="text-center col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
         <div class="row">
-          <h2>Md. Arifin Ibne Matin</h2>
-          <div class="text_mh">
-            Problem Solver - Programmer - Foodie - Hobbyist Cook
+          <div>
+            <img src="{{ site.baseurl }}/main/images/arifin.png" class="img-responsive img-thumbnail img-circle" alt="Md. Arifin Ibne Matin" style="height: 7em;">
+          </div>
+          <div class="row">
+            <h2>Md. Arifin Ibne Matin</h2>
+            <div class="text_mh">
+              Problem Solver - Programmer - Foodie - Hobbyist Cook
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <a class="pointer" href="{{ site.baseurl }}/blogs/">Blog Posts</a> |
+              <a class="pointer" href="{{site.baseurl}}/cv/">CV</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0"> -->
-    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-      <div class="intro_description top_space_small bottom_space_small">
-        <p>
-          I'm basically a problem solver, who continuously excel himself to solve real human problems utilizing his technical ability.
-        </p>
-        <p>
-          You can find me <a href="https://bd.linkedin.com/in/arifin4web">on LinkedIn</a>, <a href="https://github.com/arifin4web">on GitHub</a> and <a href="https://twitter.com/arifin4web">on Twitter</a>.
-        </p>
-        <p>
-          I am currently working with <a href="http://inov.io">Inovio</a>, a product lab. They provide support for startups and act as their tech partner. I help them in building a range of awesome products like <a href="https://www.alemhealth.com/" title="">Alemhealth</a>,
-          <a href="http://collabhero.com/">CollabHero</a>, <a href="https://joee.inov.io">Joee</a>, <a href="http://getbanyan.com">Banyan</a>, <a href="http://www.washmen.com/">Washmen</a>, <a href="http://assignmenthero.com/">AssignmentHero</a>.
-        </p>
-        <p>
-          I consider myself an expert both in creating web apps and in cooking <a href="http://images.google.com/search?tbm=isch&q=kacchi+biryani" target="_blank">kacchi biryani</a>. While my kacchi's recipe stays the same, I use variety of stacks to
-          build web apps. Though My current choice of stack is <a href="https://www.python.org/">Python</a>/<a href="https://www.djangoproject.com/">Django</a>, I also worked with <a href="https://nodejs.org/en/">NodeJS</a>/<a href="https://expressjs.com/">Express</a>/
-          <a
-            href="https://www.meteor.com/">Meteor</a>.
-        </p>
-        <p>
-          You can read my latest <a href="{{site.baseurl}}/blogs/">Blogs</a>. If you are interested in finding my skill-sets, take a look at my <a target="_blank" href="{{site.baseurl}}/cv/">CV</a>. Want to chat? Feel free to <a href="mailto:arifin4web@gmail.com">email</a> me.
-        </p>
+      <!-- <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0"> -->
+      <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+        <div class="intro_description" style="margin-top: 1em;">
+          <p>
+            I'm basically a problem solver, who continuously excel himself to solve real human problems utilizing his technical ability.
+          </p>
+          <p>
+            You can find me <a target="_blank" href="https://bd.linkedin.com/in/arifin4web">on LinkedIn</a>, <a href="https://github.com/arifin4web" target="_blank">on GitHub</a> and <a href="https://twitter.com/arifin4web" target="_blank">on Twitter</a>.
+          </p>
+          <p>
+            I am currently working with <a href="http://inov.io" target="_blank">Inovio</a>, a product lab. They provide support for startups and act as their tech partner. I help them in building a range of awesome products like <a href="https://www.alemhealth.com/"
+              title="">Alemhealth</a>,
+            <a href="http://collabhero.com/">CollabHero</a>, <a href="https://joee.inov.io">Joee</a>, <a href="http://getbanyan.com" target="_blank">Banyan</a>, <a href="http://www.washmen.com/" target="_blank">Washmen</a>, <a href="http://assignmenthero.com/"
+              target="_blank">AssignmentHero</a>.
+          </p>
+          <p>
+            I consider myself an expert both in creating web apps and in cooking <a href="http://images.google.com/search?tbm=isch&q=kacchi+biryani" target="_blank">kacchi biryani</a>. While my kacchi's recipe stays the same, I use variety of stacks to
+            build web apps. Though My current choice of stack is <a href="https://www.python.org/" target="_blank">Python</a>/<a href="https://www.djangoproject.com/" target="_blank">Django</a>, I also worked with <a href="https://nodejs.org/en/" target="_blank">NodeJS</a>/
+            <a
+              href="https://expressjs.com/" target="_blank">Express</a>/
+              <a href="https://www.meteor.com/" target="_blank">Meteor</a>.
+          </p>
+          <p>
+            You can read my latest <a href="{{site.baseurl}}/blogs/">Blogs</a>. If you are interested in finding my skill-sets, take a look at my <a target="_blank" href="{{site.baseurl}}/cv/">CV</a>. Want to chat? Feel free to <a href="mailto:arifin4web@gmail.com">email</a>            me.
+          </p>
+        </div>
       </div>
     </div>
 
+    <div class="row" style="padding-top: 0.5em;padding-bottom: 1em;">
+      <div class="col-xs-6 text-right">
+        <a href="https://twitter.com/arifin4web" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow @arifin4web</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div class="col-xs-6">
+        <div class="fb-follow" data-href="https://www.facebook.com/arifinbinmatin" data-layout="button" data-size="small" data-show-faces="false"></div>
+      </div>
+    </div>
   </div>
+
+
   <!-- End container -->
   {% include footer.html %}
 
@@ -87,7 +108,7 @@
       var w = $(window).height();
       var f = document.getElementById('footer').offsetHeight;
       $("#main_div").css("min-height", function() {
-        return w-f;
+        return w - f;
       });
     });
     $(window).load(function() { // makes sure the whole site is loaded
@@ -96,6 +117,10 @@
       $('body').delay(500).css({
         'overflow': 'visible'
       });
+    });
+
+    mixpanel.track("page_view", {
+      'item': 'Intro Page'
     });
   </script>
 
