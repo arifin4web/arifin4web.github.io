@@ -67,23 +67,22 @@
             I'm basically a problem solver, who continuously excel himself to solve real human problems utilizing his technical ability.
           </p>
           <p>
-            You can find me <a target="_blank" href="https://bd.linkedin.com/in/arifin4web">on LinkedIn</a>, <a href="https://github.com/arifin4web" target="_blank">on GitHub</a> and <a href="https://twitter.com/arifin4web" target="_blank">on Twitter</a>.
+            You can find me <a target="_blank" rel="noopener" href="https://bd.linkedin.com/in/arifin4web">on LinkedIn</a>, <a href="https://github.com/arifin4web" target="_blank" rel="noopener">on GitHub</a> and <a href="https://twitter.com/arifin4web" target="_blank" rel="noopener">on Twitter</a>.
           </p>
           <p>
-            I am currently working with <a href="http://inov.io" target="_blank">Inovio</a>, a product lab. They provide support for startups and act as their tech partner. I help them in building a range of awesome products like <a href="https://www.alemhealth.com/"
+            I am currently working with <a href="http://inov.io" target="_blank" rel="noopener">Inovio</a>, a product lab. They provide support for startups and act as their tech partner. I help them in building a range of awesome products like <a href="https://www.alemhealth.com/" target="_blank" rel="noopener"
               title="">Alemhealth</a>,
-            <a href="http://collabhero.com/">CollabHero</a>, <a href="https://joee.inov.io">Joee</a>, <a href="http://getbanyan.com" target="_blank">Banyan</a>, <a href="http://www.washmen.com/" target="_blank">Washmen</a>, <a href="http://assignmenthero.com/"
-              target="_blank">AssignmentHero</a>.
+            <a href="http://collabhero.com/" target="_blank" rel="noopener">CollabHero</a>, <a href="https://joee.inov.io" target="_blank" rel="noopener">Joee</a>, <a href="http://getbanyan.com" target="_blank" rel="noopener">Banyan</a>, <a href="http://www.washmen.com/" target="_blank" rel="noopener">Washmen</a>,
+            <a href="http://assignmenthero.com/"target="_blank" rel="noopener">AssignmentHero</a>.
           </p>
           <p>
-            I consider myself an expert both in creating web apps and in cooking <a href="http://images.google.com/search?tbm=isch&q=kacchi+biryani" target="_blank">kacchi biryani</a>. While my kacchi's recipe stays the same, I use variety of stacks to
-            build web apps. Though My current choice of stack is <a href="https://www.python.org/" target="_blank">Python</a>/<a href="https://www.djangoproject.com/" target="_blank">Django</a>, I also worked with <a href="https://nodejs.org/en/" target="_blank">NodeJS</a>/
-            <a
-              href="https://expressjs.com/" target="_blank">Express</a>/
-              <a href="https://www.meteor.com/" target="_blank">Meteor</a>.
+            I consider myself an expert both in creating web apps and in cooking <a href="http://images.google.com/search?tbm=isch&q=kacchi+biryani" target="_blank" rel="noopener">kacchi biryani</a>. While my kacchi's recipe stays the same, I use variety of stacks to
+            build web apps. Though My current choice of stack is <a href="https://www.python.org/" target="_blank" rel="noopener">Python</a>/<a href="https://www.djangoproject.com/" target="_blank" rel="noopener">Django</a>, I also worked with <a href="https://nodejs.org/en/" target="_blank" rel="noopener">NodeJS</a>/
+            <a href="https://expressjs.com/" target="_blank" rel="noopener">Express</a>/
+              <a href="https://www.meteor.com/" target="_blank" rel="noopener">Meteor</a>.
           </p>
           <p>
-            You can read my latest <a href="{{site.baseurl}}/blogs/">Blogs</a>. If you are interested in finding my skill-sets, take a look at my <a target="_blank" href="{{site.baseurl}}/cv/">CV</a>. Want to chat? Feel free to <a href="mailto:arifin4web@gmail.com">email</a>            me.
+            You can read my latest <a href="{{site.baseurl}}/blogs/">Blogs</a>. If you are interested in finding my skill-sets, take a look at my <a target="_blank" rel="noopener" href="{{site.baseurl}}/cv/">CV</a>. Want to chat? Feel free to <a href="mailto:arifin4web@gmail.com">email</a>            me.
           </p>
         </div>
       </div>
@@ -118,10 +117,11 @@
         'overflow': 'visible'
       });
     });
-
-    mixpanel.track("page_view", {
-      'item': 'Intro Page'
-    });
+    if(!(window.location.href.indexOf("localhost") > -1)){
+      mixpanel.track("page_view", {
+        'item': 'Intro Page'
+      });
+    }
   </script>
 
 </body>

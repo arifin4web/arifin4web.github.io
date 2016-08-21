@@ -97,9 +97,11 @@
     });
 
     // Send Mixpanel
-    mixpanel.track("page_view", {
-      'item': 'Blog Landing'
-    });
+    if(!(window.location.href.indexOf("localhost") > -1)){
+      mixpanel.track("page_view", {
+        'item': 'Blog Landing'
+      });
+    }
 
   </script>
 

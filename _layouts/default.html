@@ -63,9 +63,11 @@
         'overflow': 'visible'
       });
     });
-    mixpanel.track("page_view", {
-      'item': "{{ page.title }}"
-    });
+    if(!(window.location.href.indexOf("localhost") > -1)){
+      mixpanel.track("page_view", {
+        'item': "{{ page.title }}"
+      });
+    }
   </script>
 </body>
 

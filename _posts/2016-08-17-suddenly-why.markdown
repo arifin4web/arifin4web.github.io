@@ -3,7 +3,7 @@ layout: post
 title:  "Suddenly! Why?"
 date:   2016-08-17 22:45:06 +0600
 categories: Personal
-permalink: /blog/:title
+permalink: /blogs/:title
 ---
 Several times in my career, I seriously took attempts to maintain a personal blog. But It never happened.
 

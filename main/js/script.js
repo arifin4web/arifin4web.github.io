@@ -29,10 +29,12 @@ $(document).ready(function() {
   });
 
   // Send Mixpanel
-  mixpanel.track("homepage_view");
-  mixpanel.track("page_view", {
-    'item': 'CV'
-  });
+  if(!(window.location.href.indexOf("localhost") > -1)){
+    mixpanel.track("homepage_view");
+    mixpanel.track("page_view", {
+      'item': 'CV'
+    });
+  }
 });
 
 var goto = function(elem) {
@@ -47,17 +49,23 @@ var goto = function(elem) {
 }
 
 var track_resume_download_click = function() {
-  mixpanel.track("resume_download");
+  if(!(window.location.href.indexOf("localhost") > -1)){
+    mixpanel.track("resume_download");
+  }
 };
 var track_click = function(itemName) {
-  mixpanel.track("click", {
-    'item': itemName
-  });
+  if(!(window.location.href.indexOf("localhost") > -1)){
+    mixpanel.track("click", {
+      'item': itemName
+    });
+  }
 };
 var track_term_search = function(term) {
-  mixpanel.track("term_search", {
-    'term': term
-  });
+  if(!(window.location.href.indexOf("localhost") > -1)){
+    mixpanel.track("term_search", {
+      'term': term
+    });
+  }
 };
 /**
  * Followint Code is from http://percywegmann.com
