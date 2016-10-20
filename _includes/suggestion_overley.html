@@ -1,0 +1,59 @@
+<!-- The Suggestion overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <div class="row">
+    <div class="col-xs-12 text-right">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h2>Suggest a topic</h2>
+      </div>
+    </div>
+    <dov class="row">
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0 text-center">
+        <div class="input-group input-group-lg">
+          <input id="suggestion" name="suggestion" type="text" class="form-control">
+          <span class="input-group-btn">
+            <button id="suggest_btn" class="btn btn-dark-primary" type="button">
+              Suggest
+            </button>
+          </span>
+        </div>
+        <!-- /input-group -->
+      </div>
+    </dov>
+    <dov class="row">
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0 text-center">
+        <p>
+          Feel free to suggest any topic.
+        </p>
+      </div>
+    </dov>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#suggest_btn').attr('disabled', true);
+    $('#suggestion').keyup(function() {
+      if ($(this).val().length != 0) {
+        $('#suggest_btn').attr('disabled', false);
+      }else{
+        $('#suggest_btn').attr('disabled', true);
+      }
+    })
+  });
+
+  /* Open */
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
+
+  /* Close */
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
+</script>

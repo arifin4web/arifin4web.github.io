@@ -2,8 +2,10 @@
 layout: post
 title:  "Suddenly! Why?"
 date:   2016-08-17 22:45:06 +0600
-categories: Personal
+categories: personal
 permalink: /blogs/:title
+lang: english
+post_id: 1
 ---
 Several times in my career, I seriously took attempts to maintain a personal blog. But It never happened.
 

@@ -6,15 +6,15 @@ layout: default
   {% if page.categories %}
     <div class="post_tags text-center">
     {% for category in page.categories %}
-      <span class="label label-default">{{ category }}</span>
+      <a href="{{ site.baseurl }}/category/{{category}}" class="label label-default">{{ category }}</a>
     {% endfor %}
     </div>
   {% endif %}
-  <h1 class="text-center">{{ page.title }}</h1>
+  <h1 class="text-center {{page.lang}}">{{ page.title }}</h1>
 
   <div class="date text-center">{{ page.date | date: "%B %e, %Y" }}</div>
 
-  <div class="entry m-t">
+  <div class="entry m-t {{page.lang}}">
     {{ content }}
   </div>
   <div class="top_space_small bottom_space_small row">

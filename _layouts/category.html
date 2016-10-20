@@ -2,24 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>Blog | Md. Arifin Ibne Matin - Full Stack Web Application Developer</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
-  <meta charset="utf-8" />
-  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-  <meta name="description" content="{{ site.description }}">
-  <meta name="author" content="{{ site.title }}" />
-
-
-  <meta property="og:site_name" content="Md. Arifin Ibne Matin's Blog" />
-  <meta property="og:title" content="Md. Arifin Ibne Matin - Full Stack Web Application Developer" />
-  <meta property="og:description" content="{{ site.description }}" />
-  <meta property="og:image" content="{{ site.baseurl}}/main/images/arifin.png" />
-  <meta property="og:type" content="blog" />
-
-
-
+  {% include meta.html %}
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/custom.css" />
   <!-- JS Scripts -->
@@ -35,18 +20,19 @@
     <div id="status">&nbsp;</div>
   </div>
 
-  {% include suggestion_overley.html %}
-
   <nav id="main_nav" class="navbar navbar-primary navbar-static-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand pointer" href="{{ site.baseurl }}/">
+        <a class="navbar-brand pointer" href="{{ site.baseurl }}/" title="About">
           <img src="{{ site.baseurl }}/main/images/arifin.png" class="img-thumbnail img-circle" alt="Md. Arifin Ibne Matin" style="height: 2em;">
         </a>
       </div>
       <div id="navbar">
         <ul class="nav navbar-nav navbar-right">
-          <!-- <li  onclick="openNav()"><a class="pointer" onclick="openNav()">Suggest topics</a></li> -->
+          <li>
+            <a class="pointer" title="Blog List Page" href="{{ site.baseurl }}/blogs/">
+              <span class="arrow">←</span> Blog Posts</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -54,26 +40,39 @@
 
 
   <div id="main_div" class="container">
-    <div id="blog_list" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-      {% for post in site.posts %} {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %} {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %} {% if forloop.first %}
-      <h2 class="year">{{this_year}}</h2>
-      <div class="recent-posts">
-        {% endif %}
-        <div class="post_in_list row">
-          <a class="pointer" href="{{ post.url }}">
-            <div class="col-xs-10 title {{post.lang}}">{{ post.title }}</div>
-          </a>
-          <a class="pointer" href="{{ post.url }}">
-            <aside class="date">{{ post.date | date: "%b %e" }}</aside>
-          </a>
-        </div>
-        {% if forloop.last %}
+    {% unless page.term_description == '' %}
+    <div class="row">
+      <div class="term_description text-center col-xs-10 col-xs-offset-1 {{page.lang}}">
+        <h1>{{page.title}}</h1>
+        <div class="term_content">{{ page.term_description }}</div>
       </div>
-      {% else %} {% if this_year != next_year %}
     </div>
-    <h2 class="year">{{next_year}}</h2>
-    <div class="recent-posts">
-      {% endif %} {% endif %} {% endfor %}
+    {% endunless %}
+
+    <div class="row">
+
+      <div id="blog_list" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+        {% for post in site.categories[page.category] %} {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %} {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %} {% if forloop.first %}
+        <h2 class="year">{{this_year}}</h2>
+        <div class="recent-posts">
+          {% endif %}
+          <div class="post_in_list row">
+            <a class="pointer" href="{{ post.url }}">
+              <div class="col-xs-10 title {{post.lang}}">{{ post.title }}</div>
+            </a>
+            <a class="pointer" href="{{ post.url }}">
+              <aside class="date">{{ post.date | date: "%b %e" }}</aside>
+            </a>
+          </div>
+          {% if forloop.last %}
+        </div>
+        {% else %} {% if this_year != next_year %}
+      </div>
+      <h2 class="year">{{next_year}}</h2>
+      <div class="recent-posts">
+        {% endif %} {% endif %} {% endfor %}
+
+      </div>
 
     </div>
 
@@ -100,15 +99,12 @@
         'overflow': 'visible'
       });
     });
-
-    // Send Mixpanel
     if (!(window.location.href.indexOf("localhost") > -1)) {
       mixpanel.track("page_view", {
-        'item': 'Blog Landing'
+        'item': "Category : {{ page.title }}"
       });
     }
   </script>
-
 </body>
 
 </html>

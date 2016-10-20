@@ -2,8 +2,10 @@
 layout: post
 title:  "Not being super talented, helped me grow as a persistent person"
 date:   2016-08-21 08:30:00 +0600
-categories: Personal
+categories: personal
 permalink: /blogs/:title
+lang: english
+post_id: 2
 ---
 
 Though I have some technical posts in my drafts, I want my first post to have some personal touch, thus this post. I took  my first glimpse of a programming code in my very first week at [IIUC](https://www.iiuc.ac.bd/), while doing my Bsc in EEE. 10 years later, I am working as a Full-stack web application developer. I think documenting how I started my journey as a programmer will be an interesting one.
