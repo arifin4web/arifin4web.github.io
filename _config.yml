@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Md. Arifin Ibne Matin
+author: Md Arifin Ibne Matin
 designation: Full Stack Web Application Developer
 email: arifin4web@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -30,3 +31,6 @@ disqus: arifin4web
 markdown: kramdown
 theme: minima
 permalink: /blog/:title
+
+gems:
+  - jekyll-feed

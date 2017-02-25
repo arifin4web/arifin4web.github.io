@@ -1,11 +1,13 @@
 ---
 layout: post
 title:  "Suddenly! Why?"
+excerpt: As I am growing as a person and as a developer, the very idea of keeping track of my ideas keeps getting stronger even if they are some random personal philosophy or technical hacks.
 date:   2016-08-17 22:45:06 +0600
 categories: personal
 permalink: /blogs/:title
 lang: english
 post_id: 1
+
 ---
 Several times in my career, I seriously took attempts to maintain a personal blog. But It never happened.
 

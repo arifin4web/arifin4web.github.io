@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Not being super talented, helped me grow as a persistent person"
+excerpt:  documenting how I started my journey as a programmer
 date:   2016-08-21 08:30:00 +0600
 categories: personal
 permalink: /blogs/:title

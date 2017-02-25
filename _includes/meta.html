@@ -10,6 +10,8 @@
 <meta property="twitter:title" content="{{ page.title }}" />
 {% endif %}
 
+<meta property=”og:url” content="{{ site.url }}/{{}}"/>
+
 {% if page.excerpt %}
 <meta name="description" content="{{ page.excerpt| strip_html }}" />
 <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
