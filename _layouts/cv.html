@@ -14,12 +14,12 @@
 
   <!-- CSS Stylesheet -->
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/main/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/main/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/cv_main.css" />
   <!-- JS Scripts -->
-  <script type="text/javascript" src="{{ site.baseurl }}/main/js/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}/main/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}/main/js/script.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/script.js"></script>
 
   <link rel="alternate" href="http://arifin4web.github.io" hreflang="en-us" />
 
@@ -40,7 +40,7 @@
     <div id="header" class="row" itemscope itemtype="http://schema.org/Person">
       <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
         <div class="p10perc">
-          <img src="{{ site.baseurl }}/main/images/arifin.png" class="img-responsive image-frame-2px" alt="Md. Arifin Ibne Matin">
+          <img src="{{ site.baseurl }}/assets/images/arifin.png" class="img-responsive image-frame-2px" alt="Md. Arifin Ibne Matin">
         </div>
       </div>
       <div class="col-lg-6 col-lg-offset-0 visible-lg">
@@ -817,6 +817,16 @@
   </div>
   <!-- End container -->
   {% include footer.html %}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      if(!(window.location.href.indexOf("localhost") > -1)){
+        mixpanel.track("page_view", {
+          'item': 'CV'
+        });
+      }
+    });
+
+  </script>
 </body>
 
 </html>

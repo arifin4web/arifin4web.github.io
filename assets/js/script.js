@@ -1,9 +1,12 @@
 $(document).ready(function() {
+  // Initiate the Popover links
+
   $("a.popoverLink").popover({
     'trigger': 'hover',
     'html': true
   });
 
+  // Initiate tooltips
   $('[data-toggle="tooltip"]').tooltip();
 
   // ScrollTop Animatiom
@@ -16,6 +19,7 @@ $(document).ready(function() {
     });
   });
 
+  // In page links
   $('a.goto').each(function() {
     $(this).click(function() {
       var goToName = $(this).attr("data-goto");
@@ -27,14 +31,6 @@ $(document).ready(function() {
       return false;
     });
   });
-
-  // Send Mixpanel
-  if(!(window.location.href.indexOf("localhost") > -1)){
-    mixpanel.track("homepage_view");
-    mixpanel.track("page_view", {
-      'item': 'CV'
-    });
-  }
 });
 
 var goto = function(elem) {
@@ -134,7 +130,6 @@ function exitHighlightMode() {
 }
 
 //POS2
-
 function highlightTermsPos2(value) {
   var value = $("#skillsPos2").val();
   if (value && value !== '') {
